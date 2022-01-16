@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#836FFF, #FF69B4);
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    text-align: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    grid-column: 1 / 5;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 26px;
+    text-align: end;
+    padding: 0 15px;
+    color:black;
+    border: none;
+}
+
+button {
+    all: unset;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px; 
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/*Buttons*/
+.bg-white {
+    background: whitesmoke;
+}
+
+.bg-blue {
+    background: rgb(135, 206, 235);
+}
+.bg-blue:hover {
+    background: rgba(135, 206, 235, 0.6);
+}
+
+.bg-green {
+    background: rgb(144, 238, 144);
+}
+
+.bg-green:hover {
+    background: rgba(144, 238, 144, 0.6);
+}
+
+.bg-pink {
+    background: rgb(255, 105, 180);
+}
+
+.bg-pink:hover {
+    background: rgba(255, 105, 180, 0.6);
+}
+
+.bg-purple{
+    background: rgb(186, 85, 211);
+}
+
+.bg-purple:hover {
+    background: rgba(186, 85, 211, 0.6);
+}
+
+.bg-yellow {
+    background: rgb(255, 255, 102);
+}
+
+.bg-yellow:hover {
+    background: rgba(255, 255, 102, 0.6);
+}
+
+/*Medias queries*/
+@media only screen and (max-width: 425px) {
+    .container {
+        width: 250px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: 
+            "display display display"
+            "clear delete percent"
+            "seven eight nine"
+            "four five six"
+            "one two three"
+            "plus-minus zero dot"
+            "div mult equal"
+            "minus plus equal"
+            ;
+        text-align: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .display {
+        grid-column: 1/5;
+        grid-area: display;
+        font-size: 20px;
+    }
+
+    .clear-input {
+        grid-area: clear;
+    }
+
+    .delete {
+        grid-area: delete;
+    }
+
+    .percent {
+        grid-area: percent;
+    }
+
+    .div {
+        grid-area: div;
+    }
+
+    .mult {
+        grid-area: mult;
+    }
+
+    .plus {
+        grid-area: plus;
+    }
+
+    .minus {
+        grid-area: minus;
+    }
+
+    .dot {
+        grid-area: dot;
+    }
+    
+    .plus-minus {
+        grid-area: plus-minus;
+    }
+    
+    .equal {
+        grid-area: equal;
+        border-radius: 15px;
+        height: 113px;
+        width: 50px;
+        margin-left: 15px; 
+        
+    }
+
+    .nine {
+        grid-area: nine;
+    }
+
+    .eight {
+        grid-area: eight;
+    }
+    
+    .seven {
+        grid-area: seven;
+    }
+
+    .six {
+        grid-area: six;
+    }
+
+    .five {
+        grid-area: five;
+    }
+
+    .four {
+        grid-area: four;
+    }
+
+    .three {
+        grid-area: three;
+    }
+
+    .two {
+        grid-area: two;
+    }
+
+    .one {
+        grid-area: one;
+    }
+
+    .zero {
+        grid-area: zero;
+    }
+
+    button {
+        height: 50px;
+        width: 50px;
+        margin-left: 15px;
+    }
+}
